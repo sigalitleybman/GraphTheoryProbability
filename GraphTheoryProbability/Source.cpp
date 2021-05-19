@@ -26,6 +26,7 @@ double random(double p) // pick a number depend on the probabilty and
 	{
 		return p;
 	}
+	
 	else return 1 - p;
 }
 
@@ -209,12 +210,14 @@ int main()  // 1_3= 0.0069  2= 0.117
 				threshold2[1], threshold2[2], threshold2[3], threshold2[4], threshold2[5],
 				threshold2[6], threshold2[7], threshold2[8], threshold2[9]);
 		}
+		
 		if (k == 1) // connctivity
 		{
 			bool write_to_file2 = write_record_to_file("Is_connectivity.csv", "threshold_1[]", threshold1[0],
 				threshold1[1], threshold1[2], threshold1[3], threshold1[4], threshold1[5],
 				threshold1[6], threshold1[7], threshold1[8], threshold1[9]);
 		}
+		
 		if (k == 2) //isolated 
 		{
 			bool write_to_file3 = write_record_to_file("Is_isolated.csv", "threshold_3[]", threshold3[0],
@@ -278,12 +281,14 @@ int main()  // 1_3= 0.0069  2= 0.117
 				counter_diameter_INF = 0;
 
 			}
+			
 			if (k == 1)
 			{
 				cout << i << " connectivity ->" << counter_connectivity << endl;
 				counterArray_connectivity[i] = counter_connectivity / 500;
 				counter_connectivity = 0;
 			}
+			
 			if (k == 2)
 			{
 				cout << i << " isolated ->" << counter_isolated << endl;
@@ -291,6 +296,7 @@ int main()  // 1_3= 0.0069  2= 0.117
 				counter_isolated = 0;
 			}
 		}
+		
 		if (k == 0)
 		{
 			bool write_to_file1 = write_record_to_file("diameter.csv", "diameter = 2", counterArray2_diameter[0],
@@ -318,6 +324,7 @@ int main()  // 1_3= 0.0069  2= 0.117
 				counterArray_diameter_INF[7], counterArray_diameter_INF[8],
 				counterArray_diameter_INF[9]);
 		}
+		
 		if (k == 1)
 		{
 			bool write_to_file2 = write_record_to_file("Is_connectivity.csv", "connectivity ", counterArray_connectivity[0],
@@ -327,6 +334,7 @@ int main()  // 1_3= 0.0069  2= 0.117
 				counterArray_connectivity[7], counterArray_connectivity[8],
 				counterArray_connectivity[9]);
 		}
+		
 		if (k == 2)
 		{
 			bool write_to_file3 = write_record_to_file("Is_isolated.csv", "isolated ", counterArray_isolated[0],
