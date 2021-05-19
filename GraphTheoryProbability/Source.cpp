@@ -29,7 +29,6 @@ double random(double p) // pick a number depend on the probabilty and
 	else return 1 - p;
 }
 
-
 vector <vector<int >> build_random_graph(int v, double p) // function to build a graph
 {
 	int i = 0, j = 0;
@@ -135,7 +134,6 @@ int connectivity(vector<vector<int> > graphX) // This function checks if the gra
 	return 1; // 1 = connectrd
 }
 
-
 int Is_Isolated(vector<vector<int> > graphX) // The function checks if theres any isolated vertices
 {
 	for (int i = 0; i < graphX.size(); i++)
@@ -223,6 +221,7 @@ int main()  // 1_3= 0.0069  2= 0.117
 				threshold3[1], threshold3[2], threshold3[3], threshold3[4], threshold3[5],
 				threshold3[6], threshold3[7], threshold3[8], threshold3[9]);
 		}
+		
 		for (i = 0; i < 10; i++)
 		{
 			if (k == 0)
